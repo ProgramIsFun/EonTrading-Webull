@@ -5,5 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "webull-python-sdk-core>=0.1.18",
+    "webull-python-sdk-mdata>=0.1.18",
     "webull-python-sdk-quotes-core>=0.1.18",
+    "webull-python-sdk-trade>=0.1.18",
+    "webull-python-sdk-trade-events-core>=0.1.18",
 ]

@@ -148,11 +148,21 @@ name = "eontrading-webull"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "webull-python-sdk-core" },
+    { name = "webull-python-sdk-mdata" },
     { name = "webull-python-sdk-quotes-core" },
+    { name = "webull-python-sdk-trade" },
+    { name = "webull-python-sdk-trade-events-core" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "webull-python-sdk-quotes-core", specifier = ">=0.1.18" }]
+requires-dist = [
+    { name = "webull-python-sdk-core", specifier = ">=0.1.18" },
+    { name = "webull-python-sdk-mdata", specifier = ">=0.1.18" },
+    { name = "webull-python-sdk-quotes-core", specifier = ">=0.1.18" },
+    { name = "webull-python-sdk-trade", specifier = ">=0.1.18" },
+    { name = "webull-python-sdk-trade-events-core", specifier = ">=0.1.18" },
+]
 
 [[package]]
 name = "grpcio"
@@ -254,6 +264,19 @@ wheels = [
 ]
 
 [[package]]
+name = "webull-python-sdk-mdata"
+version = "0.1.18"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "webull-python-sdk-core" },
+    { name = "webull-python-sdk-quotes-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/94/68/a6d34a140e090c646a12ea8b860d06ab957af8494608c8a5e241f5af0052/webull_python_sdk_mdata-0.1.18.tar.gz", hash = "sha256:d546eae88712841290f97c2567fc80ea9c1cb3fc6dbe82d3f0c9f5ac6007d0f2", size = 13897, upload-time = "2025-08-31T08:22:54.669Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2b/74/3fa8d8693a3df3649e9ab35ffcf2e5a86531711f3449afd34011742d62b4/webull_python_sdk_mdata-0.1.18-py3-none-any.whl", hash = "sha256:1e8ce0d80056f08a1abd1bfcdec189cf8f710257243b92653e3267f6cf901181", size = 43786, upload-time = "2025-08-31T08:22:53.854Z" },
+]
+
+[[package]]
 name = "webull-python-sdk-quotes-core"
 version = "0.1.18"
 source = { registry = "https://pypi.org/simple" }
@@ -267,4 +290,32 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/03/c6/fe622452f9860593a0c9d49df8d70f01d6b3ae5f6c3c967ce007a49ad7de/webull_python_sdk_quotes_core-0.1.18.tar.gz", hash = "sha256:d605f594c40644a086c595084fb9d358f9f4a3b7dc300c629cd3cf12b8b45ead", size = 16911, upload-time = "2025-08-31T08:22:26.278Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/91/29/1e6bf7bbd6af8e0f005aaf2f68463029c4f23ce7402234e1651c4bb43212/webull_python_sdk_quotes_core-0.1.18-py3-none-any.whl", hash = "sha256:b61fc56e4107a05d0a4f9010cec331bca7efaa37ce258b9d9954c84c963c46d5", size = 28024, upload-time = "2025-08-31T08:22:25.188Z" },
+]
+
+[[package]]
+name = "webull-python-sdk-trade"
+version = "0.1.18"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "webull-python-sdk-core" },
+    { name = "webull-python-sdk-trade-events-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/93/d4/df9bf1de6bb71811baade0f23cda5fcca1f0643ddfffde0a439c60f9099e/webull_python_sdk_trade-0.1.18.tar.gz", hash = "sha256:ef6de2fbb1b1e8a7a4f00fb0fbfa12cd977740da462e0e09196b9b2033fbdaf7", size = 13411, upload-time = "2025-08-31T08:23:56.781Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/39/d4/6110597b210ac83b096199f90e367e2b8a94f931ef180b9ce6841f692281/webull_python_sdk_trade-0.1.18-py3-none-any.whl", hash = "sha256:277573b0f29fd79b28e238d57f5cf13a07c6ee387eee4eb8ce792f83c3ecd41b", size = 52633, upload-time = "2025-08-31T08:23:55.746Z" },
+]
+
+[[package]]
+name = "webull-python-sdk-trade-events-core"
+version = "0.1.18"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "grpcio" },
+    { name = "grpcio-tools" },
+    { name = "protobuf" },
+    { name = "webull-python-sdk-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b8/5e/2189b20e02035ebbd4bdc0057c07cb08d9362c18c82d8eb9a709e6293876/webull_python_sdk_trade_events_core-0.1.18.tar.gz", hash = "sha256:a0a35bb376457a3c0f668a1e5d3bc12546c51462970442ffaca65548c61fdd18", size = 6624, upload-time = "2025-08-31T08:23:24.391Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/3a/b9ab5fda3a17883316157141318817b57852bd68e520346dc4c3da5aa020/webull_python_sdk_trade_events_core-0.1.18-py3-none-any.whl", hash = "sha256:f91eca51a3406f3d1f2cbc96837f2f1c4c28e70e4a34528d0b029121e3517f6e", size = 9002, upload-time = "2025-08-31T08:23:23.45Z" },
 ]
