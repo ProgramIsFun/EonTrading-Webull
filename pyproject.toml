@@ -3,8 +3,5 @@ name = "eontrading-webull"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "ipykernel>=7.1.0",
-    "webull-python-sdk-core>=0.1.18",
-]
+requires-python = ">=3.11"
+dependencies = []
